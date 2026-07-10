@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Netlify local
+.netlify/
+
+# Claude Code local-only settings
+.claude/settings.local.json

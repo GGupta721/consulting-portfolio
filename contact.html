@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact &amp; Book a Call — Gaurav Gupta</title>
+  <meta name="description" content="Book a free 30-minute intro call or send a note about SOC 2, ISO 27001, ISO 42001, or a risk assessment engagement." />
+  <link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN/contact.html" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/">Gaurav Gupta</a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav__links" id="menu">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#why">Why me</a>
+        <a href="index.html#experience">Experience</a>
+        <a class="btn btn--primary btn--sm" href="#book">Book a call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container contact-wrap">
+
+        <!-- Left: intro + methods + booking -->
+        <div class="contact-intro">
+          <p class="eyebrow">Contact</p>
+          <h1>Tell me what you&rsquo;re trying to get compliant.</h1>
+          <p>
+            SOC&nbsp;2, ISO&nbsp;27001, ISO&nbsp;42001, a risk assessment, or just a second opinion &mdash;
+            send a few lines and I&rsquo;ll reply with whether I can help and what a first step looks like.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <span class="k">Email</span>
+              <!-- Email is inserted by JS to cut down on scraping/spam. -->
+              <a id="email-link" href="#" rel="nofollow">click to reveal</a>
+            </div>
+            <div class="contact-method">
+              <span class="k">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/guptagaurav21" target="_blank" rel="noopener">/in/guptagaurav21</a>
+            </div>
+            <div class="contact-method">
+              <span class="k">Working</span>
+              <span>Remote &middot; timezone-flexible &middot; based in Toronto</span>
+            </div>
+          </div>
+
+          <!-- ===================== BOOK ===================== -->
+          <div class="book-card" id="book">
+            <h3>Book a 30-minute intro call</h3>
+            <p>
+              Prefer to just grab a time? Once a scheduling link is set up it will live here.
+              For now, use the form and I&rsquo;ll send times back.
+            </p>
+            <!-- TO ENABLE BOOKING: paste your Calendly / Cal.com link below and swap
+                 the href. Example: href="https://calendly.com/your-handle/30min" -->
+            <a class="btn btn--primary btn--sm" style="margin-top:14px" href="#contact-form">Request a time</a>
+          </div>
+        </div>
+
+        <!-- Right: Netlify form (spam-protected via honeypot) -->
+        <div>
+          <form
+            class="contact-form"
+            id="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thanks.html"
+          >
+            <!-- Netlify needs this hidden input to match the form name -->
+            <input type="hidden" name="form-name" value="contact" />
+            <!-- Honeypot: real people never fill this; bots often do -->
+            <p class="field field--hp">
+              <label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="company">Company <span style="color:var(--ink-soft);font-weight:400">(optional)</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="need">What do you need?</label>
+              <select id="need" name="need">
+                <option>SOC 2 readiness</option>
+                <option>ISO 27001 readiness</option>
+                <option>ISO 42001 / AI governance</option>
+                <option>Risk &amp; control assessment</option>
+                <option>Third-party / AI vendor risk</option>
+                <option>Policy &amp; standards writing</option>
+                <option>Expert consultation call</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">A few lines about it</label>
+              <textarea id="message" name="message" required placeholder="Where you are now, and what you&rsquo;re trying to reach."></textarea>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-fine">
+              Your message goes straight to my inbox. No newsletter, no data sold, nothing tracked.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__meta">&copy; <span id="year">2026</span> Gaurav Gupta &middot; Remote, timezone-flexible</div>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/guptagaurav21" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

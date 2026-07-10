@@ -1,0 +1,24 @@
+# Netlify configuration — static site, no build step.
+# Just drag this folder into Netlify, or connect the git repo.
+
+[build]
+  publish = "."
+
+# ---- Security headers (applied to every response) ----
+# Strict Content-Security-Policy is possible because the site loads no
+# third-party scripts, fonts, or styles. If you later add Calendly, Google
+# Fonts, analytics, etc., you must add those hosts to the policy below.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+
+# Cache static assets aggressively (they're versioned by content anyway).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
