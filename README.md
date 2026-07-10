@@ -31,8 +31,9 @@ the repeatable blocks:
 
 ## Before you go live — replace these placeholders
 
-1. **Domain:** search-and-replace `REPLACE-WITH-YOUR-DOMAIN` in `index.html`,
-   `contact.html`, `robots.txt`, and `sitemap.xml` with your real domain.
+1. **Domain:** canonical/OG URLs currently point at `ggupta.netlify.app`. If you add a
+   custom domain later, search-and-replace `ggupta.netlify.app` in `index.html`,
+   `contact.html`, `robots.txt`, and `sitemap.xml`.
 2. **Booking link:** in `contact.html`, find the "TO ENABLE BOOKING" comment and paste
    your Calendly / Cal.com URL. (If you add Calendly, also add its host to the
    `Content-Security-Policy` line in `netlify.toml`, or the widget will be blocked.)
