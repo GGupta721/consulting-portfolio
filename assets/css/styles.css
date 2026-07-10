@@ -47,7 +47,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Layout helpers ---------- */
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-.section { padding: 96px 0; }
+.section { padding: 80px 0; }
 .section--alt { background: var(--bg-alt); }
 .eyebrow {
   font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
@@ -88,9 +88,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav__toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; transition: .2s; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 120px 0 100px; text-align: center; }
+.hero { padding: 96px 0 84px; text-align: center; }
 .hero h1 {
-  font-size: clamp(40px, 6.5vw, 76px);
+  font-size: clamp(38px, 5.5vw, 64px);
   letter-spacing: -0.04em; line-height: 1.02;
   max-width: 15ch; margin: 0 auto;
 }
@@ -107,7 +107,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .grid--services { grid-template-columns: repeat(2, 1fr); }
 .card {
   background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 30px; transition: transform .2s ease, box-shadow .2s ease;
+  padding: 24px; transition: transform .2s ease, box-shadow .2s ease;
 }
 .section--alt .card { background: #fff; }
 .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,.06); }
@@ -165,10 +165,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ---------- CTA band ---------- */
-.cta-band { background: var(--navy); color: #fff; text-align: center; }
-.cta-band h2 { font-size: clamp(30px, 4.5vw, 46px); letter-spacing: -0.03em; }
-.cta-band p { margin: 16px auto 0; max-width: 520px; color: #b9c6d8; font-size: 18px; }
-.cta-band .btn--light { margin-top: 30px; }
+.cta-band { background: var(--navy); color: #fff; text-align: center; padding: 56px 0; }
+.cta-band h2 { font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; }
+.cta-band p { margin: 12px auto 0; max-width: 520px; color: #b9c6d8; font-size: 16px; }
+.cta-band .btn--light { margin-top: 22px; }
 .cta-band__fine { margin-top: 18px; font-size: 13px; color: #8ba0bd; }
 
 /* ---------- Footer ---------- */
